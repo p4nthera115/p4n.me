@@ -1,11 +1,6 @@
-"use client";
-
-import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
-  const [active, setActive] = useState(false);
-
   const projects = [
     {
       title: "Chroma Corps",
@@ -30,8 +25,6 @@ export default function Projects() {
           description={project.description}
           url={project.url}
           image={project.image}
-          active={active}
-          setActive={setActive}
         />
       ))}
     </div>
