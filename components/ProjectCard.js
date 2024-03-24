@@ -10,14 +10,17 @@ export default function ProjectCard({ title, url, image, description }) {
     setActive(!active);
   };
 
-  const inactiveStyle = "";
-  const activeStyle = "";
+  const inactiveStyle =
+    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex relative flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition";
+  const activeStyle =
+    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex relative flex-row gap-10 rounded-2xl bg-[#181818]";
 
   return (
     <motion.div
       transition={{
         ease: "easeInOut",
         duration: 0.2,
+        type: "tween",
       }}
       animate={
         active
@@ -25,11 +28,10 @@ export default function ProjectCard({ title, url, image, description }) {
               width: "100%",
               height: "100%",
               zIndex: 100,
-              position: "absolute",
             }
-          : { marginX: "auto" }
+          : null
       }
-      className="w-[90%] sm:w-3/4 md:w-1/2 mx-auto h-[11rem] p-6 flex relative flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition"
+      className={!active ? inactiveStyle : activeStyle}
       onClick={handleClick}
     >
       {/* <div className="flex h-full w-full aspect-video bg-white rounded-lg"></div>
