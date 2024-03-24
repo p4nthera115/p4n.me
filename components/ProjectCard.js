@@ -29,7 +29,9 @@ export default function ProjectCard({ title, url, image, description }) {
               height: "100%",
               zIndex: 100,
             }
-          : null
+          : {
+              margin: "0 auto",
+            }
       }
       className={!active ? inactiveStyle : activeStyle}
       onClick={handleClick}
