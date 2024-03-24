@@ -11,7 +11,7 @@ export default function ProjectCard({ title, url, image, description }) {
   };
 
   const inactiveStyle =
-    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex relative flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition";
+    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex relative flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition hidden";
   const activeStyle =
     "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex relative flex-row gap-10 rounded-2xl bg-[#181818]";
 
@@ -26,8 +26,10 @@ export default function ProjectCard({ title, url, image, description }) {
         active
           ? {
               width: "100%",
-              height: "100%",
+              height: "95vh",
               zIndex: 100,
+              display: "flex",
+              position: "relative",
             }
           : {
               margin: "0 auto",
