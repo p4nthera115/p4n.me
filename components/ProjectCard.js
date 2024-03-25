@@ -11,9 +11,9 @@ export default function ProjectCard({ title, url, image, description }) {
   };
 
   const inactiveStyle =
-    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex relative flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition hidden";
+    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex  flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition ";
   const activeStyle =
-    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex relative flex-row gap-10 rounded-2xl bg-[#181818]";
+    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex  flex-row gap-10 rounded-2xl bg-[#181818]";
 
   return (
     <motion.div
