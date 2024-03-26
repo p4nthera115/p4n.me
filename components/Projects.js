@@ -3,47 +3,52 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
-export default function Projects() {
+export default function Projects({ handleActiveCard }) {
+  const [activeCardId, setActiveCardId] = useState(null);
+  const [isAnyCardActive, setIsAnyCardActive] = useState(false); // Flag to track whether any card is active
   const [projects, setProjects] = useState([
     {
-      id: 0,
+      id: 1,
       title: "Chroma Corps",
       description: "",
       url: "www.chroma-corps.com",
       image: "",
     },
     {
-      id: 1,
+      id: 2,
       title: "Booknook",
       description: "",
       url: "www.booknook.app",
       image: "",
     },
     {
-      id: 1,
+      id: 3,
       title: "Booknook",
       description: "",
       url: "www.booknook.app",
       image: "",
     },
-    // {
-    //   id: 1,
-    //   title: "Booknook",
-    //   description: "",
-    //   url: "www.booknook.app",
-    //   image: "",
-    // },
   ]);
 
+  const handleActiveCardChange = (id) => {
+    setActiveCardId(id);
+    setIsAnyCardActive(!!id);
+    handleActiveCard(id);
+  };
+
   return (
-    <div className="flex flex-col relative gap-4 mx-auto w-full ">
+    <div className="flex flex-col relative gap-4 mx-auto w-full">
       {projects.map((project, i) => (
         <ProjectCard
           key={i}
+          id={project.id}
           title={project.title}
           description={project.description}
           url={project.url}
           image={project.image}
+          activeCardId={activeCardId}
+          handleActiveCard={handleActiveCardChange}
+          isAnyCardActive={isAnyCardActive}
         />
       ))}
     </div>

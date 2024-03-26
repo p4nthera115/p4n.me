@@ -3,17 +3,42 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function ProjectCard({ title, url, image, description }) {
+export default function ProjectCard({
+  id,
+  title,
+  url,
+  image,
+  description,
+  activeCardId,
+  handleActiveCard,
+  isAnyCardActive,
+}) {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
-    setActive(!active);
+    if (active && activeCardId === id) {
+      // If the card is active and it's clicked again, toggle it off
+      setActive(false);
+      handleActiveCard(null); // Pass null to indicate no active card
+    } else {
+      // Otherwise, toggle it on
+      setActive(true);
+      handleActiveCard(id); // Pass the card id to indicate it's active
+    }
   };
 
+  const isActive = activeCardId === id;
+
   const inactiveStyle =
-    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex  flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition ";
+    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition block";
   const activeStyle =
-    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex  flex-row gap-10 rounded-2xl bg-[#181818]";
+    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex flex-row gap-10 rounded-2xl bg-[#181818] block";
+
+  const cardStyle = isActive
+    ? activeStyle
+    : isAnyCardActive
+    ? inactiveStyle
+    : inactiveStyle;
 
   return (
     <motion.div
@@ -26,7 +51,7 @@ export default function ProjectCard({ title, url, image, description }) {
         active
           ? {
               width: "100%",
-              height: "95vh",
+              height: "94vh",
               zIndex: 100,
               display: "flex",
               position: "relative",
@@ -35,7 +60,7 @@ export default function ProjectCard({ title, url, image, description }) {
               margin: "0 auto",
             }
       }
-      className={!active ? inactiveStyle : activeStyle}
+      className={cardStyle}
       onClick={handleClick}
     >
       {/* <div className="flex h-full w-full aspect-video bg-white rounded-lg"></div>
