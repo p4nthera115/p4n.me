@@ -36,8 +36,10 @@ export default function Projects({ handleActiveCard }) {
     handleActiveCard(id);
   };
 
+  console.log(activeCardId);
+
   return (
-    <div className="flex flex-col relative gap-4 mx-auto w-full">
+    <div className={`flex flex-col relative gap-4 mx-auto w-full`}>
       {projects.map((project, i) => (
         <ProjectCard
           key={i}

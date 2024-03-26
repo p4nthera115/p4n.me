@@ -17,27 +17,25 @@ export default function ProjectCard({
 
   const handleClick = () => {
     if (active && activeCardId === id) {
-      // If the card is active and it's clicked again, toggle it off
       setActive(false);
-      handleActiveCard(null); // Pass null to indicate no active card
+      handleActiveCard(null);
     } else {
-      // Otherwise, toggle it on
       setActive(true);
-      handleActiveCard(id); // Pass the card id to indicate it's active
+      handleActiveCard(id);
     }
   };
 
   const isActive = activeCardId === id;
 
   const inactiveStyle =
-    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition block";
+    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition ";
   const activeStyle =
     "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex flex-row gap-10 rounded-2xl bg-[#181818] block";
 
   const cardStyle = isActive
     ? activeStyle
     : isAnyCardActive
-    ? inactiveStyle
+    ? inactiveStyle + "hidden"
     : inactiveStyle;
 
   return (
@@ -53,8 +51,6 @@ export default function ProjectCard({
               width: "100%",
               height: "94vh",
               zIndex: 100,
-              display: "flex",
-              position: "relative",
             }
           : {
               margin: "0 auto",
