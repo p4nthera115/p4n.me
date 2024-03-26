@@ -35,7 +35,7 @@ export default function ProjectCard({
   const cardStyle = isActive
     ? activeStyle
     : isAnyCardActive
-    ? inactiveStyle + "hidden"
+    ? inactiveStyle
     : inactiveStyle;
 
   return (
