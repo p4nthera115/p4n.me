@@ -3,29 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function ProjectCard({
-  id,
-  title,
-  url,
-  image,
-  description,
-  activeCardId,
-  handleActiveCard,
-  isAnyCardActive,
-}) {
+export default function ProjectCard({ id, title, url, image, description }) {
   const [active, setActive] = useState(false);
-
-  const handleClick = () => {
-    if (active && activeCardId === id) {
-      setActive(false);
-      handleActiveCard(null);
-    } else {
-      setActive(true);
-      handleActiveCard(id);
-    }
-  };
-
-  const isActive = activeCardId === id;
 
   const inactiveStyle =
     "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition ";
