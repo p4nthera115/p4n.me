@@ -32,12 +32,6 @@ export default function ProjectCard({
   const activeStyle =
     "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex flex-row gap-10 rounded-2xl bg-[#181818] block";
 
-  const cardStyle = isActive
-    ? activeStyle
-    : isAnyCardActive
-    ? inactiveStyle
-    : inactiveStyle;
-
   return (
     <motion.div
       transition={{
@@ -48,6 +42,7 @@ export default function ProjectCard({
       animate={
         active
           ? {
+              position: "fixed",
               width: "100%",
               height: "94vh",
               zIndex: 100,
@@ -56,7 +51,7 @@ export default function ProjectCard({
               margin: "0 auto",
             }
       }
-      className={cardStyle}
+      className={active ? activeStyle : inactiveStyle}
       onClick={handleClick}
     >
       {/* <div className="flex h-full w-full aspect-video bg-white rounded-lg"></div>
