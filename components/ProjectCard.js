@@ -31,7 +31,7 @@ export default function ProjectCard({ id, title, url, image, description }) {
             }
       }
       className={active ? activeStyle : inactiveStyle}
-      onClick={handleClick}
+      onClick={() => setActive(!active)}
     >
       {/* <div className="flex h-full w-full aspect-video bg-white rounded-lg"></div>
       <div className="flex flex-col gap-4">
