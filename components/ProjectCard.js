@@ -7,40 +7,15 @@ export default function ProjectCard({ id, title, url, image, description }) {
   const [active, setActive] = useState(false);
 
   const inactiveStyle =
-    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex flex-row gap-10 rounded-2xl bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black transition ";
+    "flex w-1/2 justify-center h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer hover:-translate-y-1 hover:shadow-md shadow-black ";
   const activeStyle =
-    "w-[90%] sm:w-3/4 md:w-1/2 h-[11rem] p-6 flex flex-row gap-10 rounded-2xl bg-[#181818] block";
+    "flex absolute w-full h-full justify-center rounded-2xl bg-[#181818]";
 
   return (
     <motion.div
-      transition={{
-        ease: "easeInOut",
-        duration: 0.2,
-        type: "tween",
-      }}
-      animate={
-        active
-          ? {
-              position: "fixed",
-              width: "100%",
-              height: "94vh",
-              zIndex: 100,
-            }
-          : {
-              margin: "0 auto",
-            }
-      }
-      className={active ? activeStyle : inactiveStyle}
+      layout
+      className={!active ? inactiveStyle : activeStyle}
       onClick={() => setActive(!active)}
-    >
-      {/* <div className="flex h-full w-full aspect-video bg-white rounded-lg"></div>
-      <div className="flex flex-col gap-4">
-        <h2 className="text-2xl">{title}</h2>
-        <p className="text-xs md:text-sm">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
-          possimus consequuntur, distinctio, doloribus autem in veritatis ad.
-        </p>
-      </div> */}
-    </motion.div>
+    ></motion.div>
   );
 }
