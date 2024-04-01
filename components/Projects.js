@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import { motion } from "framer-motion";
 
-export default function Projects({ handleActiveCard }) {
-  const [activeCardId, setActiveCardId] = useState(null);
-  const [isAnyCardActive, setIsAnyCardActive] = useState(false); // Flag to track whether any card is active
+export default function Projects() {
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -30,16 +29,12 @@ export default function Projects({ handleActiveCard }) {
     },
   ]);
 
-  const handleActiveCardChange = (id) => {
-    setActiveCardId(id);
-    setIsAnyCardActive(!!id);
-    handleActiveCard(id);
-  };
-
-  console.log(activeCardId);
-
   return (
-    <div className={`flex flex-col relative gap-4 mx-auto w-full`}>
+    <motion.div
+      layout
+      layoutRoot
+      className="h-full w-full relative flex flex-col gap-6 justify-center  items-center"
+    >
       {projects.map((project, i) => (
         <ProjectCard
           key={i}
@@ -48,11 +43,8 @@ export default function Projects({ handleActiveCard }) {
           description={project.description}
           url={project.url}
           image={project.image}
-          activeCardId={activeCardId}
-          handleActiveCard={handleActiveCardChange}
-          isAnyCardActive={isAnyCardActive}
         />
       ))}
-    </div>
+    </motion.div>
   );
 }
