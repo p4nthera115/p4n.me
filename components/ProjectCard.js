@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 export default function ProjectCard({ id, title, url, image, description }) {
   const [active, setActive] = useState(false);
   const [textStyling, setTextStyling] = useState("");
+  const [z, setZ] = useState("");
 
   useEffect(() => {
     if (active) {
@@ -13,13 +14,14 @@ export default function ProjectCard({ id, title, url, image, description }) {
         () => setTextStyling("bg-white/5 transition duration-300"),
         400
       );
+      setZ("z-[100]");
     } else {
       setTextStyling("");
+      setTimeout(() => setZ("z-[1]"), 500);
     }
   }, [active]);
 
-  const inactiveCard =
-    "flex relative w-5/6 md:3/4 lg:w-2/5 justify-center h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-6";
+  const inactiveCard = `flex relative w-5/6 md:3/4 lg:w-2/5 justify-center h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-6 ${z}`;
   const activeCard =
     "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-6 flex-col md:flex-row gap-12 z-[100]";
 
