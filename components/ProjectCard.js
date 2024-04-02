@@ -30,7 +30,7 @@ export default function ProjectCard({ id, title, url, image, description }) {
     "flex mr-auto max-h-[50%] h-1/2 w-1/2 bg-white rounded-2xl";
 
   const inactiveText = "flex flex-col h-32 w-1/2 ml-6 bg-none gap-4";
-  const activeText = `flex flex-col w-1/2 h-96 max-h-[50%] ${textStyling} gap-8 rounded-2xl p-6`;
+  const activeText = `flex flex-col w-1/2 h-96 h-[50%] max-h-[50%] ${textStyling} gap-8 rounded-2xl p-6`;
 
   return (
     <motion.div
@@ -42,7 +42,7 @@ export default function ProjectCard({ id, title, url, image, description }) {
         layout
         className={!active ? inactiveThumb : activeThumb}
       ></motion.div>
-      <motion.div
+      <motion.section
         layout="position"
         className={!active ? inactiveText : activeText}
       >
@@ -56,7 +56,7 @@ export default function ProjectCard({ id, title, url, image, description }) {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
           possimus consequuntur, distinctio, doloribus autem in veritatis ad.
         </p>
-      </motion.div>
+      </motion.section>
       {/* {active && (
         <motion.div className="absolute flex flex-row h-1/2 w-full bg-neutral-800 rounded-2xl bottom-0"></motion.div>
       )} */}
