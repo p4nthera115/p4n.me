@@ -12,6 +12,7 @@ export default function Projects() {
       description: "",
       url: "www.chroma-corps.com",
       image: "",
+      stack: ["TypeScript, NextJs, Tailwindcss, Threejs, Cloudflare"],
     },
     {
       id: 2,
@@ -19,6 +20,7 @@ export default function Projects() {
       description: "",
       url: "www.booknook.app",
       image: "",
+      stack: ["TypeScript, NextJS, Tailwindcss, Supabase"],
     },
     {
       id: 3,
@@ -26,6 +28,7 @@ export default function Projects() {
       description: "",
       url: "www.booknook.app",
       image: "",
+      stack: [],
     },
   ]);
 
@@ -43,6 +46,7 @@ export default function Projects() {
           description={project.description}
           url={project.url}
           image={project.image}
+          stack={project.stack}
         />
       ))}
     </motion.div>

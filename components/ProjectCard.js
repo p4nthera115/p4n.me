@@ -2,8 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Stack from "./Stack";
 
-export default function ProjectCard({ id, title, url, image, description }) {
+export default function ProjectCard({
+  id,
+  title,
+  url,
+  image,
+  description,
+  stack,
+}) {
   const [active, setActive] = useState(false);
   const [textStyling, setTextStyling] = useState("");
   const [z, setZ] = useState("");
@@ -21,7 +29,7 @@ export default function ProjectCard({ id, title, url, image, description }) {
     }
   }, [active]);
 
-  const inactiveCard = `flex relative w-5/6 md:3/4 lg:w-2/5 justify-center h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-6 ${z}`;
+  const inactiveCard = `flex relative w-5/6 md:3/4 lg:w-1/2 justify-evenly h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-6 ${z}`;
   const activeCard =
     "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-6 flex-col md:flex-row gap-12 z-[100]";
 
@@ -46,13 +54,19 @@ export default function ProjectCard({ id, title, url, image, description }) {
         layout="position"
         className={!active ? inactiveText : activeText}
       >
-        <motion.h2
+        <div className="flex flex-row justify-between">
+          <motion.h2
+            layout="position"
+            className={!active ? "text-2xl" : "text-5xl"}
+          >
+            {title}
+          </motion.h2>
+          {active && <Stack stack={stack} />}
+        </div>
+        <p
           layout="position"
-          className={!active ? "text-2xl" : "text-5xl"}
+          className={!active ? "text-xs md:text-sm" : "text-xl "}
         >
-          Title
-        </motion.h2>
-        <p layout className={!active ? "text-xs md:text-sm" : "text-xl"}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
           possimus consequuntur, distinctio, doloribus autem in veritatis ad.
         </p>
