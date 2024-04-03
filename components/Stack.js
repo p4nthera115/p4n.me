@@ -48,13 +48,6 @@ export default function Stack({ active, stack, setHover }) {
   ];
 
   return (
-    // <motion.ol
-    //   onHoverStart={() => setHover(true)}
-    //   onHoverEnd={() => setHover(false)}
-    //   className="flex flex-row gap-3 text-4xl p-1 select-none "
-    // >
-    //   {stackArr.map((item) => item)}
-    // </motion.ol>
     <motion.ol className="flex flex-row gap-3 text-4xl p-1 select-none">
       {stackArr.map((item) => (
         <motion.li
