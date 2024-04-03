@@ -7,6 +7,7 @@ import {
   SiThreedotjs,
   SiSupabase,
   SiCloudflare,
+  SiPrisma,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -19,6 +20,7 @@ export default function Stack({ stack }) {
     <SiThreedotjs className="hover:scale-105 transition" />,
     <SiSupabase className="hover:scale-105 transition hover:text-green-400" />,
     <SiCloudflare className="hover:scale-105 transition hover:text-orange-400" />,
+    <SiPrisma className="hover:scale-105 transition hover:text-sky-900" />,
   ];
 
   return (
