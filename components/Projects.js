@@ -3,6 +3,15 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiThreedotjs,
+  SiSupabase,
+  SiCloudflare,
+  SiPrisma,
+} from "react-icons/si";
 
 export default function Projects() {
   const [projects, setProjects] = useState([
@@ -12,7 +21,34 @@ export default function Projects() {
       description: "",
       url: "www.chroma-corps.com",
       image: "",
-      stack: ["TypeScript, NextJs, Tailwindcss, Threejs, Cloudflare"],
+      stack: [
+        {
+          icon: (
+            <SiTypescript className="hover:scale-105 transition hover:text-blue-500" />
+          ),
+          name: "Typescript",
+        },
+        {
+          icon: <SiNextdotjs className="hover:scale-105 transition" />,
+          name: "Next.js",
+        },
+        {
+          icon: (
+            <SiTailwindcss className="hover:scale-105 transition hover:text-sky-400" />
+          ),
+          name: "TailwindCSS",
+        },
+        {
+          icon: <SiThreedotjs className="hover:scale-105 transition" />,
+          name: "Three.js",
+        },
+        {
+          icon: (
+            <SiCloudflare className="hover:scale-105 transition hover:text-orange-400" />
+          ),
+          name: "Cloudflare",
+        },
+      ],
     },
     {
       id: 2,
@@ -20,7 +56,36 @@ export default function Projects() {
       description: "",
       url: "www.booknook.app",
       image: "",
-      stack: ["TypeScript, NextJS, Tailwindcss, Supabase"],
+      stack: [
+        {
+          icon: (
+            <SiTypescript className="hover:scale-105 transition hover:text-blue-500" />
+          ),
+          name: "Typescript",
+        },
+        {
+          icon: <SiNextdotjs className="hover:scale-105 transition" />,
+          name: "Next.js",
+        },
+        {
+          icon: (
+            <SiTailwindcss className="hover:scale-105 transition hover:text-sky-400" />
+          ),
+          name: "TailwindCSS",
+        },
+        {
+          icon: (
+            <SiSupabase className="hover:scale-105 transition hover:text-green-400" />
+          ),
+          name: "Supabase",
+        },
+        {
+          icon: (
+            <SiPrisma className="hover:scale-105 transition hover:text-sky-900" />
+          ),
+          name: "Prisma",
+        },
+      ],
     },
     {
       id: 3,
