@@ -10,6 +10,7 @@ export default function ProjectCard({
   title,
   url,
   image,
+  video,
   description,
   stack,
 }) {
@@ -32,11 +33,12 @@ export default function ProjectCard({
 
   const inactiveCard = `flex relative w-5/6 md:3/4 lg:w-1/2 justify-evenly h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-6 ${z}`;
   const activeCard =
-    "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-6 flex-col md:flex-row gap-12 z-[100] hover:cursor-default";
+    "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-6 flex-col md:flex-row gap-12 z-[100] hover:cursor-default overflow-hidden";
 
-  const inactiveThumb = "flex h-32 left-0 aspect-video bg-white rounded-lg";
+  const inactiveThumb =
+    "flex h-32 left-0 aspect-video bg-white rounded-lg overflow-hidden";
   const activeThumb =
-    "flex mr-auto max-h-[50%] h-1/2 w-1/2 bg-white rounded-2xl";
+    "flex mr-auto max-h-[50%] h-1/2 w-1/2 bg-white rounded-2xl overflow-hidden object-contain";
 
   const inactiveText = "flex flex-col h-32 w-1/2 ml-6 bg-none gap-4 text-left";
   const activeText = `flex flex-col w-1/2 h-96 h-[50%] max-h-[50%] ${textStyling} gap-8 rounded-2xl p-6 text-left`;
@@ -47,10 +49,23 @@ export default function ProjectCard({
       className={!active ? inactiveCard : activeCard}
       onClick={() => setActive(!active)}
     >
-      <motion.div
-        layout
-        className={!active ? inactiveThumb : activeThumb}
-      ></motion.div>
+      <motion.div layout className={!active ? inactiveThumb : activeThumb}>
+        {/* {!active ? (
+          <img
+            className="justify-center items-center self-center flex"
+            src={image}
+            alt="cc"
+          />
+        ) : (
+          <video
+            autoPlay
+            loop
+            className="justify-center items-center self-center flex"
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        )} */}
+      </motion.div>
       <motion.section
         layout="position"
         className={!active ? inactiveText : activeText}
@@ -58,7 +73,7 @@ export default function ProjectCard({
         <ProjectCardHeader active={active} title={title} stack={stack} />
         <p
           layout="position"
-          className={!active ? "text-xs md:text-sm flex" : "text-xl"}
+          className={!active ? "text-xs md:text-sm flex" : ""}
         >
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
           possimus consequuntur, distinctio, doloribus autem in veritatis ad.

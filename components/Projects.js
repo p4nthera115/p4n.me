@@ -20,7 +20,8 @@ export default function Projects() {
       title: "Chroma Corps",
       description: "",
       url: "www.chroma-corps.com",
-      image: "",
+      image: "/images/chromacorps.png",
+      video: "/videos/chromacorps.mp4",
       stack: [
         {
           icon: (
@@ -56,6 +57,7 @@ export default function Projects() {
       description: "",
       url: "www.booknook.app",
       image: "",
+      video: "",
       stack: [
         {
           icon: (
@@ -89,10 +91,11 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Booknook",
+      title: "p4n.me",
       description: "",
       url: "www.booknook.app",
       image: "",
+      video: "",
       stack: [],
     },
   ]);
@@ -111,6 +114,7 @@ export default function Projects() {
           description={project.description}
           url={project.url}
           image={project.image}
+          video={project.video}
           stack={project.stack}
         />
       ))}
