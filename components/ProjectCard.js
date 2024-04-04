@@ -31,7 +31,7 @@ export default function ProjectCard({
     }
   }, [active]);
 
-  const inactiveCard = `flex relative w-5/6 md:3/4 lg:w-1/2 justify-evenly h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-6 ${z}`;
+  const inactiveCard = `flex relative w-5/6 md:3/4 lg:w-1/2 justify-evenly h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-6 ${z} `;
   const activeCard =
     "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-6 flex-col md:flex-row gap-12 z-[100] hover:cursor-default overflow-hidden";
 
@@ -46,6 +46,9 @@ export default function ProjectCard({
   return (
     <motion.button
       layout
+      initial={{ y: 0 }}
+      whileHover={{ y: -5 }}
+      // transition={{ type: "tween", duration: 0.1 }}
       className={!active ? inactiveCard : activeCard}
       onClick={() => setActive(!active)}
     >
@@ -73,7 +76,7 @@ export default function ProjectCard({
         <ProjectCardHeader active={active} title={title} stack={stack} />
         <p
           layout="position"
-          className={!active ? "text-xs md:text-sm flex" : ""}
+          className={!active ? "text-xs md:text-sm flex" : "text-xl"}
         >
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
           possimus consequuntur, distinctio, doloribus autem in veritatis ad.

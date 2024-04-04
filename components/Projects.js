@@ -96,7 +96,18 @@ export default function Projects() {
       url: "www.booknook.app",
       image: "",
       video: "",
-      stack: [],
+      stack: [
+        {
+          icon: <SiNextdotjs className="hover:scale-105 transition" />,
+          name: "Next.js",
+        },
+        {
+          icon: (
+            <SiTailwindcss className="hover:scale-105 transition hover:text-sky-400" />
+          ),
+          name: "TailwindCSS",
+        },
+      ],
     },
   ]);
 
