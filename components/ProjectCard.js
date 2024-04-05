@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Stack from "./Stack";
 import ProjectCardHeader from "./ProjectCardHeader";
+import Link from "next/link";
 
 export default function ProjectCard({
   id,
@@ -36,9 +36,9 @@ export default function ProjectCard({
     "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-6 flex-col md:flex-row gap-12 z-[100] hover:cursor-default overflow-hidden";
 
   const inactiveThumb =
-    "flex h-32 left-0 aspect-video bg-white rounded-lg overflow-hidden";
+    "flex h-32 left-0 aspect-video rounded-lg overflow-hidden";
   const activeThumb =
-    "flex mr-auto max-h-[50%] h-1/2 w-1/2 bg-white rounded-2xl overflow-hidden object-contain";
+    "flex mr-auto max-h-[50%] h-1/2 w-1/2 rounded-2xl overflow-hidden object-contain";
 
   const inactiveText = "flex flex-col h-32 w-1/2 ml-6 bg-none gap-4 text-left";
   const activeText = `flex flex-col w-1/2 h-96 h-[50%] max-h-[50%] ${textStyling} gap-8 rounded-2xl p-6 text-left`;
@@ -47,17 +47,17 @@ export default function ProjectCard({
     <motion.button
       layout
       initial={{ y: 0 }}
-      whileHover={{ y: -5 }}
+      whileHover={!active && { y: -5 }}
       // transition={{ type: "tween", duration: 0.1 }}
       className={!active ? inactiveCard : activeCard}
       onClick={() => setActive(!active)}
     >
       <motion.div layout className={!active ? inactiveThumb : activeThumb}>
-        {/* {!active ? (
+        {!active ? (
           <img
             className="justify-center items-center self-center flex"
             src={image}
-            alt="cc"
+            alt={title}
           />
         ) : (
           <video
@@ -67,7 +67,7 @@ export default function ProjectCard({
           >
             <source src={video} type="video/mp4" />
           </video>
-        )} */}
+        )}
       </motion.div>
       <motion.section
         layout="position"
@@ -81,6 +81,15 @@ export default function ProjectCard({
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
           possimus consequuntur, distinctio, doloribus autem in veritatis ad.
         </p>
+        {active && (
+          <Link
+            className="flex justify-center items-center text-white/70 hover:text-white transition rounded-full self-end bg-white/10 border border-white/50 h-8 w-32 mt-auto"
+            href={url}
+            target="_blank"
+          >
+            Visit website
+          </Link>
+        )}
       </motion.section>
       {/* {active && (
         <motion.div className="absolute flex flex-row h-1/2 w-full bg-neutral-800 rounded-2xl bottom-0"></motion.div>

@@ -19,7 +19,7 @@ export default function Projects() {
       id: 1,
       title: "Chroma Corps",
       description: "",
-      url: "www.chroma-corps.com",
+      url: "https://www.chroma-corps.com",
       image: "/images/chromacorps.png",
       video: "/videos/chromacorps.mp4",
       stack: [
