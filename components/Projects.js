@@ -50,13 +50,18 @@ export default function Projects() {
           name: "Cloudflare",
         },
       ],
-      timeline: [],
+      timeline: [
+        {
+          thumb: "",
+          link: "",
+        },
+      ],
     },
     {
       id: 2,
       title: "Booknook",
       description: "",
-      url: "www.booknook.app",
+      url: "WIP",
       image: "",
       video: "",
       stack: [
@@ -89,7 +94,12 @@ export default function Projects() {
           name: "Prisma",
         },
       ],
-      timeline: [],
+      timeline: [
+        {
+          thumb: "",
+          link: "",
+        },
+      ],
     },
     {
       id: 3,
@@ -112,25 +122,8 @@ export default function Projects() {
       ],
       timeline: [
         {
-          tweet: (
-            <>
-              <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                  <a href="https://t.co/SIoAx1esBQ">https://t.co/SIoAx1esBQ</a>{" "}
-                  under construction
-                </p>
-                &mdash; p4n (@p4nthera_){" "}
-                <a href="https://twitter.com/p4nthera_/status/1771603324095082709?ref_src=twsrc%5Etfw">
-                  March 23, 2024
-                </a>
-              </blockquote>{" "}
-              <script
-                async
-                src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"
-              ></script>
-            </>
-          ),
+          thumb: "",
+          link: "",
         },
       ],
     },

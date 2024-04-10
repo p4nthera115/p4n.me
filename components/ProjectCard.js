@@ -38,9 +38,9 @@ export default function ProjectCard({
     "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-6 flex-col md:flex-row gap-12 z-[100] hover:cursor-default overflow-hidden";
 
   const inactiveThumb =
-    "flex h-32 left-0 aspect-video rounded-lg overflow-hidden bg-white";
+    "flex h-32 left-0 aspect-video rounded-lg overflow-hidden";
   const activeThumb =
-    "flex mr-auto max-h-[50%] h-1/2 w-1/2 rounded-2xl overflow-hidden object-contain bg-white";
+    "flex mr-auto max-h-[50%] h-1/2 w-1/2 rounded-2xl overflow-hidden object-contain";
 
   const inactiveText = "flex flex-col h-32 w-1/2 ml-6 bg-none gap-4 text-left";
   const activeText = `flex flex-col w-1/2 h-96 h-[50%] max-h-[50%] ${textStyling} gap-8 rounded-2xl p-6 text-left`;
@@ -83,7 +83,7 @@ export default function ProjectCard({
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
           possimus consequuntur, distinctio, doloribus autem in veritatis ad.
         </p>
-        {active && (
+        {active && url !== "WIP" ? (
           <Link
             className="flex justify-center items-center text-white/70 hover:text-white transition rounded-full self-end bg-white/10 border border-white/50 h-8 w-32 mt-auto"
             href={url}
@@ -91,9 +91,15 @@ export default function ProjectCard({
           >
             Visit website
           </Link>
+        ) : (
+          active && (
+            <div className="flex justify-center items-center text-white/70 rounded-md self-end border border-white/50 px-2 py-1 mt-auto">
+              WIP
+            </div>
+          )
         )}
       </motion.section>
-      {/* <Timeline active={active} timeline={timeline} /> */}
+      <Timeline active={active} timeline={timeline} />
     </motion.button>
   );
 }
