@@ -6,8 +6,6 @@ export default function ProjectCardHeader({ active, title, stack }) {
   const [hover, setHover] = useState("");
   const [overflow, setOverflow] = useState("");
 
-  console.log(hover);
-
   useEffect(() => {
     if (active) {
       setTimeout(() => setOverflow("overflow-hidden"), 400);

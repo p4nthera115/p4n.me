@@ -50,6 +50,7 @@ export default function Projects() {
           name: "Cloudflare",
         },
       ],
+      timeline: [],
     },
     {
       id: 2,
@@ -88,6 +89,7 @@ export default function Projects() {
           name: "Prisma",
         },
       ],
+      timeline: [],
     },
     {
       id: 3,
@@ -108,6 +110,29 @@ export default function Projects() {
           name: "TailwindCSS",
         },
       ],
+      timeline: [
+        {
+          tweet: (
+            <>
+              <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">
+                  <a href="https://t.co/SIoAx1esBQ">https://t.co/SIoAx1esBQ</a>{" "}
+                  under construction
+                </p>
+                &mdash; p4n (@p4nthera_){" "}
+                <a href="https://twitter.com/p4nthera_/status/1771603324095082709?ref_src=twsrc%5Etfw">
+                  March 23, 2024
+                </a>
+              </blockquote>{" "}
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </>
+          ),
+        },
+      ],
     },
   ]);
 
@@ -115,7 +140,7 @@ export default function Projects() {
     <motion.div
       layout
       layoutRoot
-      className="h-full w-full relative flex flex-col gap-6 justify-center  items-center"
+      className="h-full w-full relative flex flex-col gap-6 justify-center items-center"
     >
       {projects.map((project, i) => (
         <ProjectCard
@@ -127,6 +152,7 @@ export default function Projects() {
           image={project.image}
           video={project.video}
           stack={project.stack}
+          timeline={project.timeline}
         />
       ))}
     </motion.div>
