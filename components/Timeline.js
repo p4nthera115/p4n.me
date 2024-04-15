@@ -9,15 +9,16 @@ export default function Timeline({ active, timeline }) {
           {timeline.map((tweet, i) => {
             return (
               <motion.li
+                key={i}
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.3,
-                  delay: 1.4 + i * 0.1,
+                  delay: 1.2 + i * 0.1,
                   type: "tween",
                 }}
               >
-                <TimelineCard key={i} tweet={tweet} />
+                <TimelineCard tweet={tweet} />
               </motion.li>
             );
           })}

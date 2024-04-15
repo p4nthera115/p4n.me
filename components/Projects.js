@@ -161,6 +161,10 @@ export default function Projects() {
           ),
           name: "TailwindCSS",
         },
+        {
+          icon: <SiThreedotjs className="hover:scale-105 transition" />,
+          name: "Three.js",
+        },
       ],
       timeline: [
         {
