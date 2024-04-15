@@ -1,5 +1,4 @@
-"use client";
-import { useState } from "react";
+import IconChange from "@/components/IconChange";
 import Projects from "@/components/Projects";
 
 export default function Home() {
@@ -7,7 +6,9 @@ export default function Home() {
     <div
       className={`bg-[#1e1e1e] h-screen w-screen relative p-6 overflow-hidden`}
     >
-      <Projects />
+      <Projects>
+        <IconChange />
+      </Projects>
     </div>
   );
 }
