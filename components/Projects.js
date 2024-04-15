@@ -124,6 +124,27 @@ export default function Projects() {
         {
           thumb: "",
           link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: false,
         },
       ],
     },
