@@ -54,6 +54,27 @@ export default function Projects() {
         {
           thumb: "",
           link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: false,
         },
       ],
     },
@@ -98,6 +119,27 @@ export default function Projects() {
         {
           thumb: "",
           link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: true,
+        },
+        {
+          thumb: "",
+          link: "",
+          divider: false,
         },
       ],
     },
@@ -105,7 +147,7 @@ export default function Projects() {
       id: 3,
       title: "p4n.me",
       description: "",
-      url: "www.booknook.app",
+      url: "WIP",
       image: "",
       video: "",
       stack: [

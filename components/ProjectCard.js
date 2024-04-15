@@ -42,8 +42,8 @@ export default function ProjectCard({
   const activeThumb =
     "flex mr-auto max-h-[50%] h-1/2 w-1/2 rounded-2xl overflow-hidden object-contain";
 
-  const inactiveText = "flex flex-col h-32 w-1/2 ml-6 bg-none gap-4 text-left";
-  const activeText = `flex flex-col w-1/2 h-96 h-[50%] max-h-[50%] ${textStyling} gap-8 rounded-2xl p-6 text-left`;
+  const inactiveBio = "flex flex-col h-32 w-1/2 ml-6 bg-none gap-4 text-left";
+  const activeBio = `flex flex-col w-1/2 h-96 h-[50%] max-h-[50%] ${textStyling} gap-8 rounded-2xl p-6 text-left`;
 
   return (
     <motion.button
@@ -73,7 +73,7 @@ export default function ProjectCard({
       </motion.div>
       <motion.section
         layout="position"
-        className={!active ? inactiveText : activeText}
+        className={!active ? inactiveBio : activeBio}
       >
         <ProjectCardHeader active={active} title={title} stack={stack} />
         <p
@@ -93,7 +93,7 @@ export default function ProjectCard({
           </Link>
         ) : (
           active && (
-            <div className="flex justify-center items-center text-white/70 rounded-md self-end border border-white/50 px-2 py-1 mt-auto">
+            <div className="flex justify-center items-center text-white/70 hover:text-white transition rounded-md self-end border border-white/50 hover:border-white px-2 py-1 mt-auto">
               WIP
             </div>
           )
