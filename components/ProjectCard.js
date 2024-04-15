@@ -57,7 +57,7 @@ export default function ProjectCard({
       <motion.div layout className={!active ? inactiveThumb : activeThumb}>
         {!active ? (
           <img
-            className="justify-center items-center self-center flex"
+            className="justify-center items-center self-center flex rounded-lg"
             src={image}
             alt={title}
           />
