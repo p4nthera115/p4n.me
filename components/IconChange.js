@@ -1,17 +1,18 @@
-"use client";
-
-import { usePageVisibility } from "react-page-visibility";
-import { useEffect } from "react";
-
-export default function IconChange() {
-  const pageVisibility = usePageVisibility();
-
-  useEffect(() => {
-    if (pageVisibility) {
-      link.setAttribute("href", "icon-on.svg");
-    } else {
-      link.setAttribute("href", "icon-off.svg");
-    }
-  }, [pageVisibility]);
-  return <div>IconChange</div>;
+export function generateMetadata({ pageVisibility }) {
+  console.log(pageVisibility);
+  return {
+    icons: {
+      icon: [
+        pageVisibility
+          ? {
+              url: "/images/icon-on.svg",
+              href: "/images/icon-on.svg",
+            }
+          : {
+              url: "/images/icon-off.svg",
+              href: "/images/icon-off.svg",
+            },
+      ],
+    },
+  };
 }

@@ -13,7 +13,7 @@ import {
   SiPrisma,
 } from "react-icons/si";
 
-export default function Projects() {
+export default function Projects({ children }) {
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -215,6 +215,7 @@ export default function Projects() {
           timeline={project.timeline}
         />
       ))}
+      {children}
     </motion.div>
   );
 }
