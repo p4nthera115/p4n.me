@@ -9,12 +9,12 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: "/images/icon-on.svg",
-        href: "/images/icon-on.svg",
+        url: "/icon-on.svg",
+        href: "/icon-on.svg",
       },
       {
-        url: "/images/icon-off.svg",
-        href: "/images/icon-off.svg",
+        url: "/icon-off.svg",
+        href: "/icon-off.svg",
       },
     ],
   },
