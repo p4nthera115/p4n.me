@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { IoOpenOutline } from "react-icons/io5";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function TimelineCard({ tweet }) {
   const [hover, setHover] = useState(false);
@@ -14,7 +15,7 @@ export default function TimelineCard({ tweet }) {
         tweet.divider && "w-[420px]"
       }`}
     >
-      <div className="flex flex-col gap-2 ">
+      <div className="flex flex-col gap-2">
         <motion.a
           className="flex min-h-44 min-w-[313px] aspect-video rounded-xl overflow-hidden bg-neutral-700 border border-white/30"
           href={tweet.link}
@@ -29,10 +30,12 @@ export default function TimelineCard({ tweet }) {
               hover ? "text-white" : "text-white/50"
             } transition`}
           />
-          <img
-            className="justify-center items-center self-center flex"
+          <Image
+            className="justify-center items-center self-center flex opacity-75 hover:opacity-100 transition"
             src={tweet.thumb}
             alt={"tweet"}
+            height={176}
+            width={313}
           />
         </motion.a>
         <div className="mt-2 flex text-white/70 z-10 overflow-hidden items-center justify-center ">
