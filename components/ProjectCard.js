@@ -19,6 +19,7 @@ export default function ProjectCard({
   const [active, setActive] = useState(false);
   const [textStyling, setTextStyling] = useState("");
   const [z, setZ] = useState("");
+  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     if (active) {
@@ -27,9 +28,11 @@ export default function ProjectCard({
         400
       );
       setZ("z-[100]");
+      setTimeout(() => setShowVideo(true), 1000);
     } else {
       setTextStyling("");
       setTimeout(() => setZ("z-[1]"), 500);
+      setShowVideo(false);
     }
   }, [active]);
 
@@ -55,21 +58,20 @@ export default function ProjectCard({
       onClick={() => setActive(!active)}
     >
       <motion.div layout className={!active ? inactiveThumb : activeThumb}>
-        {!active ? (
-          <img
-            className="justify-center items-center self-center flex rounded-lg"
-            src={image}
-            alt={title}
-          />
-        ) : (
+        {active && showVideo && (
           <video
             autoPlay
             loop
-            className="justify-center items-center self-center flex"
+            className="justify-center items-center self-center flex z-50"
           >
             <source src={video} type="video/mp4" />
           </video>
         )}
+        <img
+          className="justify-center items-center self-center flex rounded-lg z-40"
+          src={image}
+          alt={title}
+        />
       </motion.div>
       <motion.section
         layout="position"
