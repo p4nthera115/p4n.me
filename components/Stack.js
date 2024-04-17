@@ -1,18 +1,6 @@
-"use client";
-
-import { useState } from "react";
-import {
-  SiTypescript,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiThreedotjs,
-  SiSupabase,
-  SiCloudflare,
-  SiPrisma,
-} from "react-icons/si";
 import { motion } from "framer-motion";
 
-export default function Stack({ active, stack, setHover }) {
+export default function Stack({ stack, setHover }) {
   return (
     <motion.ol className="flex flex-row gap-3 text-4xl p-1 select-none">
       {stack.map((item, i) => (

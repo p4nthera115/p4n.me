@@ -10,11 +10,11 @@ export default function TimelineCard({ tweet }) {
   console.log(hover);
   return (
     <div
-      className={`relative flex flex-row items-center gap-4 ${
+      className={`relative flex flex-row items-center gap-4  ${
         tweet.divider && "w-[420px]"
       }`}
     >
-      <div className="flex flex-col gap-2 -mb-10">
+      <div className="flex flex-col gap-2 ">
         <motion.a
           className="flex min-h-44 min-w-[313px] aspect-video rounded-xl overflow-hidden bg-neutral-700 border border-white/30"
           href={tweet.link}
@@ -35,7 +35,7 @@ export default function TimelineCard({ tweet }) {
             alt={"tweet"}
           />
         </motion.a>
-        <div className="mt-2 flex text-white/70 z-10 overflow-hidden items-center justify-center">
+        <div className="mt-2 flex text-white/70 z-10 overflow-hidden items-center justify-center ">
           <motion.span
             transition={{ type: "tween", duration: 0.2 }}
             animate={
@@ -51,8 +51,10 @@ export default function TimelineCard({ tweet }) {
             {tweet.date}
             <motion.span
               transition={{ duration: 0.1 }}
-              animate={hover ? { opacity: 1 } : { opacity: 0 }}
-              className="flex absolute pt-1 w-32 -left-[50%]"
+              animate={
+                hover ? { opacity: 1 } : { opacity: 0, display: "hidden" }
+              }
+              className="flex absolute pt-1 w-32 -left-[50%] text-white"
             >
               view tweet
             </motion.span>

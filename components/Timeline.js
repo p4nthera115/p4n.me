@@ -5,7 +5,7 @@ export default function Timeline({ active, timeline }) {
   return (
     <>
       {active && (
-        <motion.ol className="absolute flex flex-row h-1/2 max-h-[50%] w-[97%] rounded-2xl bottom-0 p-8 px-10 items-center overflow-x-auto my-1 overfow-y-hidden">
+        <motion.ol className="absolute flex flex-row h-1/2 max-h-[45%] w-[97%] rounded-2xl bottom-0 px-10 items-center overflow-x-auto my-1 overflow-y-hidden">
           {timeline.map((tweet, i) => {
             return (
               <motion.li
