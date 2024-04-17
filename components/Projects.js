@@ -20,7 +20,7 @@ export default function Projects() {
       title: "Chroma Corps",
       description: "",
       url: "https://www.chroma-corps.com",
-      image: "/images/chromacorps.png",
+      image: "/images/cc/chromacorps.png",
       video: "/videos/chromacorps.mp4",
       stack: [
         {
@@ -52,33 +52,39 @@ export default function Projects() {
       ],
       timeline: [
         {
-          thumb: "/images/cc-coming-soon.gif",
+          thumb: "/images/cc/cc-coming-soon.gif",
           link: "https://x.com/p4nthera_/status/1662181247504855040",
           date: "05/23",
           divider: true,
         },
         {
-          thumb: "/images/cc-loading.gif",
+          thumb: "/images/cc/cc-loading.gif",
           link: "https://x.com/p4nthera_/status/1667183827192520705",
           date: "06/23",
           divider: true,
         },
         {
-          thumb: "/images/cc-cadet-select.gif",
+          thumb: "/images/cc/cc-cadet-select.gif",
           link: "https://x.com/p4nthera_/status/1667649236400320512",
           date: "06/23",
           divider: true,
         },
         {
-          thumb: "",
-          link: "",
-          date: "03/24",
+          thumb: "/images/cc/cc-cadet-page.gif",
+          link: "https://x.com/p4nthera_/status/1671534061985120258",
+          date: "06/24",
           divider: true,
         },
         {
-          thumb: "",
-          link: "",
-          date: "03/24",
+          thumb: "/images/cc/cc-assignments.gif",
+          link: "https://x.com/p4nthera_/status/1674825898141401108",
+          date: "06/24",
+          divider: true,
+        },
+        {
+          thumb: "/images/cc/cc-finished.gif",
+          link: "https://x.com/p4nthera_/status/1703131936628109815",
+          date: "09/24",
           divider: false,
         },
       ],
