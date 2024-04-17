@@ -26,7 +26,7 @@ export default function TimelineCard({ tweet }) {
           <IoOpenOutline
             className={`absolute top-0 ${
               tweet.divider ? "right-28" : "right-0"
-            } m-2 mt-3 h-5 w-5 ${
+            } m-2 mt-3 h-5 w-5 z-50 ${
               hover ? "text-white" : "text-white/50"
             } transition`}
           />
