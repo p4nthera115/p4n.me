@@ -32,18 +32,15 @@ body {
   }
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
   height: 15px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #000000;
   border-radius: 25px;
@@ -59,4 +56,59 @@ body {
 ::-webkit-scrollbar-track-piece:end {
   background: transparent;
   width: 10px;
+}
+
+.cc-button {
+  content: "";
+  height: 2rem;
+  width: 8rem;
+  display: flex;
+  border-radius: 9999px;
+  align-self: flex-end;
+  margin-top: auto;
+  filter: blur(0.5rem);
+  background: linear-gradient(
+    var(--gradient-angle),
+    #745d09,
+    #a0821e,
+    #ffd42a,
+    #a0821e,
+    #745d09
+  );
+  animation: rotation 10s linear infinite;
+}
+
+.button {
+  content: "";
+  height: 2rem;
+  width: 8rem;
+  display: flex;
+  border-radius: 9999px;
+  align-self: flex-end;
+  margin-top: auto;
+  filter: blur(0.5rem);
+  background: linear-gradient(
+    var(--gradient-angle),
+    #580974,
+    #7f1ea0,
+    #b42aff,
+    #7f1ea0,
+    #580974
+  );
+  animation: rotation 10s linear infinite;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
 }

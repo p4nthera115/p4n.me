@@ -84,15 +84,16 @@ export default function ProjectCard({
           possimus consequuntur, distinctio, doloribus autem in veritatis ad.
         </p>
         {active && url !== "WIP" ? (
-          <>
+          <div className="flex justify-end items-end">
             <Link
-              className="flex justify-center items-center text-white/70 hover:text-white transition rounded-full self-end bg-white/10 border border-white/50 h-8 w-32 mt-auto"
+              className="flex absolute justify-center items-center text-white/70 hover:text-white transition rounded-full self-end bg-neutral-900 border border-yellow-300/30 h-8 w-32 mt-auto z-20"
               href={url}
               target="_blank"
             >
               Visit website
             </Link>
-          </>
+            <div className="cc-button self-end"></div>
+          </div>
         ) : (
           active && (
             <div className="flex justify-center items-center text-white/70 hover:text-white transition rounded-md self-end border border-white/50 hover:border-white px-2 py-1 mt-auto">

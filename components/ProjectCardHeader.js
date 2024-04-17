@@ -32,7 +32,7 @@ export default function ProjectCardHeader({ active, title, stack }) {
       >
         <span className="flex">{title}</span>
         <motion.span
-          transition={{ duration: 0.001 }}
+          transition={{ delay: 0.01 }}
           animate={hover ? { opacity: 1 } : { opacity: 0 }}
           className="flex absolute pt-1"
         >
