@@ -254,17 +254,24 @@ export default function Projects() {
       className="h-full w-full relative flex flex-col gap-6 justify-center items-center"
     >
       {projects.map((project, i) => (
-        <ProjectCard
-          key={i}
-          id={project.id}
-          title={project.title}
-          description={project.description}
-          url={project.url}
-          image={project.image}
-          video={project.video}
-          stack={project.stack}
-          timeline={project.timeline}
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, delay: 0.2 + i * 0.1, type: "tween" }}
+          className="flex justify-center"
+        >
+          <ProjectCard
+            key={i}
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            url={project.url}
+            image={project.image}
+            video={project.video}
+            stack={project.stack}
+            timeline={project.timeline}
+          />
+        </motion.div>
       ))}
     </motion.div>
   );

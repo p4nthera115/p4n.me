@@ -8,7 +8,6 @@ import Image from "next/image";
 export default function TimelineCard({ tweet }) {
   const [hover, setHover] = useState(false);
 
-  console.log(hover);
   return (
     <div
       className={`relative flex flex-row items-center gap-4  ${
