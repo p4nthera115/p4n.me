@@ -249,29 +249,31 @@ export default function Projects() {
 
   return (
     <motion.div
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        type: "tween",
+        ease: "easeInOut",
+        staggerChildren: 0.2,
+        staggerDirection: 1,
+      }}
       layout
       layoutRoot
       className="h-full w-full relative flex flex-col gap-6 justify-center items-center"
     >
       {projects.map((project, i) => (
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2, delay: 0.2 + i * 0.1, type: "tween" }}
-          className="flex justify-center"
-        >
-          <ProjectCard
-            key={i}
-            id={project.id}
-            title={project.title}
-            description={project.description}
-            url={project.url}
-            image={project.image}
-            video={project.video}
-            stack={project.stack}
-            timeline={project.timeline}
-          />
-        </motion.div>
+        <ProjectCard
+          key={i}
+          id={project.id}
+          title={project.title}
+          description={project.description}
+          url={project.url}
+          image={project.image}
+          video={project.video}
+          stack={project.stack}
+          timeline={project.timeline}
+        />
       ))}
     </motion.div>
   );
