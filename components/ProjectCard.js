@@ -28,7 +28,7 @@ export default function ProjectCard({
         400
       );
       setZ("z-[100]");
-      setTimeout(() => setShowVideo(true), 1000);
+      setTimeout(() => setShowVideo(true), 1500);
     } else {
       setTextStyling("");
       setTimeout(() => setZ("z-[1]"), 500);
@@ -43,7 +43,7 @@ export default function ProjectCard({
   const inactiveThumb =
     "flex h-32 left-0 aspect-video rounded-lg overflow-hidden";
   const activeThumb =
-    "flex mr-auto max-h-[50%] h-1/2 w-1/2 rounded-2xl overflow-hidden object-contain";
+    "flex mr-auto max-h-[50%] h-1/2 w-1/2 rounded-2xl overflow-hidden object-contain items-center";
 
   const inactiveBio = "flex flex-col h-32 w-1/2 ml-6 bg-none gap-4 text-left";
   const activeBio = `flex flex-col w-1/2 h-96 h-[50%] max-h-[50%] ${textStyling} gap-8 rounded-2xl p-6 text-left`;
@@ -58,20 +58,17 @@ export default function ProjectCard({
       onClick={() => setActive(!active)}
     >
       <motion.div layout className={!active ? inactiveThumb : activeThumb}>
-        {active && showVideo && (
-          <video
-            autoPlay
-            loop
-            className="justify-center items-center self-center flex z-50"
-          >
+        {active && showVideo ? (
+          <video autoPlay loop className="relative">
             <source src={video} type="video/mp4" />
           </video>
+        ) : (
+          <img
+            className="justify-center items-center self-center flex rounded-lg z-50"
+            src={image}
+            alt={title}
+          />
         )}
-        <img
-          className="justify-center items-center self-center flex rounded-lg z-40"
-          src={image}
-          alt={title}
-        />
       </motion.div>
       <motion.section
         layout="position"
