@@ -49,7 +49,7 @@ export default function MobileProjectCard({
       onClick={() => setActive(!active)}
     >
       <motion.div
-        layout="size"
+        layout="position"
         className={active ? activeThumb : inactiveThumb}
       >
         {active && showVideo && video ? (
