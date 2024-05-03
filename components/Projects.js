@@ -252,7 +252,7 @@ export default function Projects() {
       initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 0.5,
+        duration: 1.0,
         type: "tween",
         ease: "easeInOut",
         staggerChildren: 0.2,

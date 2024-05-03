@@ -13,7 +13,7 @@ export default function Home() {
     <div
       className={`bg-[#1e1e1e] h-screen w-screen relative p-6 overflow-hidden`}
     >
-      {isLoading ? <SplashScreen /> : <Projects />}
+      <Projects />
     </div>
   );
 }
