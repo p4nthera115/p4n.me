@@ -53,7 +53,6 @@ export default function ProjectCard({
       layout
       initial={{ y: 0 }}
       whileHover={!active && { y: -5 }}
-      // transition={{ type: "tween", duration: 0.1 }}
       className={!active ? inactiveCard : activeCard}
       onClick={() => setActive(!active)}
     >

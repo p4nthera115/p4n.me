@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 import {
@@ -12,8 +12,10 @@ import {
   SiCloudflare,
   SiPrisma,
 } from "react-icons/si";
+import MobileProjectCard from "./MobileProjectCard";
 
 export default function Projects() {
+  const [width, setWidth] = useState(300);
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -247,6 +249,12 @@ export default function Projects() {
     },
   ]);
 
+  // useEffect(() => {
+  //   if (window) setWidth(window.innerWidth);
+  // }, [window.innerWidth]);
+
+  console.log(width);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 0 }}
@@ -260,21 +268,35 @@ export default function Projects() {
       }}
       layout
       layoutRoot
-      className="h-full w-full relative flex flex-col gap-6 justify-center items-center"
+      className="h-full w-full relative flex flex-col gap-2 md:gap-6 justify-center items-center"
     >
-      {projects.map((project, i) => (
-        <ProjectCard
-          key={i}
-          id={project.id}
-          title={project.title}
-          description={project.description}
-          url={project.url}
-          image={project.image}
-          video={project.video}
-          stack={project.stack}
-          timeline={project.timeline}
-        />
-      ))}
+      {projects.map((project, i) =>
+        width > 768 ? (
+          <ProjectCard
+            key={i}
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            url={project.url}
+            image={project.image}
+            video={project.video}
+            stack={project.stack}
+            timeline={project.timeline}
+          />
+        ) : (
+          <MobileProjectCard
+            key={i}
+            id={project.id}
+            title={project.title}
+            description={project.description}
+            url={project.url}
+            image={project.image}
+            video={project.video}
+            stack={project.stack}
+            timeline={project.timeline}
+          />
+        )
+      )}
     </motion.div>
   );
 }
