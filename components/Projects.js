@@ -15,7 +15,7 @@ import {
 import MobileProjectCard from "./MobileProjectCard";
 
 export default function Projects() {
-  const [width, setWidth] = useState(300);
+  const [width, setWidth] = useState(0);
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -249,9 +249,9 @@ export default function Projects() {
     },
   ]);
 
-  // useEffect(() => {
-  //   if (window) setWidth(window.innerWidth);
-  // }, [window.innerWidth]);
+  useEffect(() => {
+    if (window) setWidth(window.innerWidth);
+  }, [window.innerWidth]);
 
   console.log(width);
 
