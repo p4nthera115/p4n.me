@@ -38,7 +38,7 @@ export default function MobileProjectCard({
 
   const inactiveThumb = "overflow-hidden h-full rounded-lg flex justify-center";
   const activeThumb =
-    "flex mr-auto rounded-2xl overflow-hidden object-contain items-center justify-center";
+    "flex mr-auto h-36 rounded-xl overflow-hidden object-contain items-center justify-center";
 
   return (
     <motion.button
@@ -52,11 +52,17 @@ export default function MobileProjectCard({
         layout="size"
         className={active ? activeThumb : inactiveThumb}
       >
-        <img
-          className="justify-center items-center self-center object-cover flex rounded-lg z-50"
-          src={image}
-          alt={title}
-        />
+        {active && showVideo && video ? (
+          <video autoPlay loop className="relative">
+            <source src={video} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            className="justify-center items-center self-center object-cover flex rounded-lg z-50"
+            src={image}
+            alt={title}
+          />
+        )}
       </motion.div>
     </motion.button>
   );
