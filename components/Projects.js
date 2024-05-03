@@ -251,7 +251,7 @@ export default function Projects() {
 
   useEffect(() => {
     if (window) setWidth(window.innerWidth);
-  }, [window.innerWidth]);
+  }, []);
 
   console.log(width);
 
