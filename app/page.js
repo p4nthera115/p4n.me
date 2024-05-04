@@ -3,17 +3,24 @@
 import { useState, useEffect } from "react";
 import Projects from "@/components/Projects";
 import SplashScreen from "@/components/SplashScreen";
+import MobileSocials from "@/components/MobileSocials";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    if (window) setWidth(window.innerWidth);
+  }, []);
 
   setTimeout(() => setIsLoading(false), 900);
 
   return (
     <div
-      className={`bg-[#1e1e1e] h-screen w-screen relative p-4 md:p-6 overflow-hidden`}
+      className={`bg-[#1e1e1e] h-full w-screen relative p-4 md:p-6 overflow-hidden flex flex-col gap-3`}
     >
-      <Projects />
+      <Projects width={width} />
+      {width > 768 ? null : <MobileSocials />}
     </div>
   );
 }

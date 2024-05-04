@@ -32,13 +32,13 @@ export default function MobileProjectCard({
     }
   }, [active]);
 
-  const inactiveCard = `flex relative justify-evenly h-[32%] rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-4 ${z} `;
+  const inactiveCard = `flex aspect-video relative h-[32%] rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-4 ${z} `;
   const activeCard =
     "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-4 flex-col md:flex-row gap-12 z-[100] hover:cursor-default overflow-hidden";
 
   const inactiveThumb = "overflow-hidden h-full rounded-lg flex justify-center";
   const activeThumb =
-    "flex mr-auto h-36 rounded-xl overflow-hidden object-contain items-center justify-center";
+    "flex mr-auto aspect-video rounded-xl overflow-hidden object-contain items-center justify-center";
 
   return (
     <motion.button

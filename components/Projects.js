@@ -14,8 +14,7 @@ import {
 } from "react-icons/si";
 import MobileProjectCard from "./MobileProjectCard";
 
-export default function Projects() {
-  const [width, setWidth] = useState(0);
+export default function Projects({ width }) {
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -249,10 +248,6 @@ export default function Projects() {
     },
   ]);
 
-  useEffect(() => {
-    if (window) setWidth(window.innerWidth);
-  }, []);
-
   console.log(width);
 
   return (
@@ -268,7 +263,7 @@ export default function Projects() {
       }}
       layout
       layoutRoot
-      className="h-full w-full relative flex flex-col gap-2 md:gap-6 justify-center items-center"
+      className="h-[90%] w-full relative flex  flex-col gap-2 md:gap-6 justify-center items-center"
     >
       {projects.map((project, i) =>
         width > 768 ? (
