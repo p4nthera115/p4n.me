@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function MobileProjectCard({
   id,
@@ -34,11 +35,11 @@ export default function MobileProjectCard({
 
   const inactiveCard = `flex aspect-video relative h-[32%] rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-4 ${z} `;
   const activeCard =
-    "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-4 flex-col md:flex-row gap-12 z-[100] hover:cursor-default overflow-hidden";
+    "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-4 flex-col md:flex-row gap-4 z-[100] hover:cursor-default overflow-hidden";
 
   const inactiveThumb = "overflow-hidden h-full rounded-lg flex justify-center";
   const activeThumb =
-    "flex mr-auto aspect-video rounded-xl overflow-hidden object-contain items-center justify-center";
+    "flex h-full w-full aspect-video rounded-xl overflow-hidden object-contain items-center justify-center";
 
   return (
     <motion.button
@@ -64,6 +65,36 @@ export default function MobileProjectCard({
           />
         )}
       </motion.div>
+      {active && (
+        <div
+          layout="position"
+          className="rounded-xl h-full bg-white/5 p-4 flex flex-col gap-4"
+        >
+          <h2 className="text-xl self-start">{title}</h2>
+          <p className="text-md self-start justify-start text-left">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
+            exercitationem ipsum assumenda eius, eaque veritatis!
+          </p>
+        </div>
+      )}
+      {active && url !== "WIP" ? (
+        <div className="flex justify-end items-end self-center scale-75">
+          <Link
+            className="flex absolute justify-center items-center text-white/70 hover:text-white transition rounded-full self-end bg-neutral-900 border border-yellow-300/30 h-8 w-32 mt-auto z-20"
+            href={url}
+            target="_blank"
+          >
+            Visit website
+          </Link>
+          <div className="cc-button self-end"></div>
+        </div>
+      ) : (
+        active && (
+          <div className="flex justify-center items-center text-white/70 hover:text-white transition rounded-md self-end border border-white/50 hover:border-white px-2 py-1 mt-auto">
+            WIP
+          </div>
+        )
+      )}
     </motion.button>
   );
 }
