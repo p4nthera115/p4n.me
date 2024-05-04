@@ -39,7 +39,7 @@ export default function MobileProjectCard({
 
   const inactiveThumb = "overflow-hidden h-full rounded-lg flex justify-center";
   const activeThumb =
-    "flex h-full w-full aspect-video rounded-xl overflow-hidden object-contain items-center justify-center";
+    "flex mb-auto h-[90%] w-full aspect-video rounded-xl overflow-hidden object-contain items-center justify-center";
 
   return (
     <motion.button
@@ -68,7 +68,7 @@ export default function MobileProjectCard({
       {active && (
         <div
           layout="position"
-          className="rounded-xl h-full bg-white/5 p-4 flex flex-col gap-4"
+          className="rounded-xl h-[125%] bg-white/5 p-4 flex flex-col gap-4"
         >
           <h2 className="text-xl self-start">{title}</h2>
           <p className="text-md self-start justify-start text-left">
