@@ -41,11 +41,11 @@ export default function ProjectCard({
     "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-6 flex-col md:flex-row gap-12 z-[100] hover:cursor-default overflow-hidden";
 
   const inactiveThumb =
-    "flex h-32 left-0 aspect-video rounded-lg overflow-hidden justify-center";
+    "flex h-32 mr-auto aspect-video rounded-lg overflow-hidden justify-center";
   const activeThumb =
     "flex mr-auto max-h-[50%] h-1/2 w-1/2 rounded-2xl overflow-hidden object-contain items-center justify-center";
 
-  const inactiveBio = "flex flex-col h-32 w-1/2 ml-6 bg-none gap-4 text-left";
+  const inactiveBio = "flex flex-col h-32 w-[60%] ml-6 bg-none gap-4 text-left";
   const activeBio = `flex flex-col w-1/2 h-96 h-[50%] max-h-[50%] ${textStyling} gap-8 rounded-2xl p-6 text-left`;
 
   return (

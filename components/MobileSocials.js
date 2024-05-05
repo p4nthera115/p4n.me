@@ -10,25 +10,21 @@ export default function MobileSocials() {
         duration: 1.0,
         type: "tween",
         ease: "easeInOut",
-        staggerChildren: 0.2,
-        staggerDirection: 1,
       }}
-      className="px-4 rounded-lg bg-[#181818] flex flex-row  justify-center self-center "
+      className="px-4 rounded-lg bg-[#181818] flex flex-row mt-auto justify-center self-center"
     >
-      {/* <div className="self-center items-center"> */}
-      {/* </div> */}
-      <div className="flex flex-row gap-5">
+      <div className="flex flex-row gap-5 h-12 w-6">
         <a href="https://www.x.com/p4nthera_" target="_blank">
-          <FaXTwitter className="h-12 w-6 flex" />
+          <FaXTwitter />
         </a>
         <a href="https://www.github.com/p4nthera115" target="_blank">
-          <FaGithub className="h-12 w-6 flex" />
+          <FaGithub />
         </a>
         <a href="https://www.instagram.com/_p4nthera" target="_blank">
-          <FaInstagram className="h-12 w-6 flex" />
+          <FaInstagram />
         </a>
         <a href="https://open.spotify.com/user/asdshuja06" target="_blank">
-          <FaSpotify className="h-12 w-6 flex" />
+          <FaSpotify />
         </a>
       </div>
     </motion.div>
