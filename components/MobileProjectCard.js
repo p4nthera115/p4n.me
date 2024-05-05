@@ -72,8 +72,7 @@ export default function MobileProjectCard({
         >
           <h2 className="text-xl self-start">{title}</h2>
           <p className="text-md self-start justify-start text-left">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam
-            exercitationem ipsum assumenda eius, eaque veritatis!
+            {description}
           </p>
         </div>
       )}

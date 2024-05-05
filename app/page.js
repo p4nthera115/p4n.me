@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Projects from "@/components/Projects";
+import SplashScreen from "@/components/SplashScreen";
 import MobileSocials from "@/components/MobileSocials";
 import Socials from "@/components/Socials";
 
