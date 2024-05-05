@@ -94,7 +94,7 @@ export default function Projects({ width }) {
       id: 2,
       title: "Booknook",
       description:
-        'A passion project similar to "Goodreads" made by myself and a friend. Booknook has more of a social aspect and is more focused on reading with others.',
+        'A passion project similar to "Goodreads" made by myself and a friend. Booknook has more of a social aspect and has a focus on reading with others.',
       url: "WIP",
       image: "/images/bn/bn-thumb.png",
       video: "",
