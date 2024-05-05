@@ -68,15 +68,15 @@ export default function MobileProjectCard({
       {active && (
         <div
           layout="position"
-          className="rounded-xl h-[125%] bg-white/5 p-4 flex flex-col gap-4"
+          className="rounded-xl h-[125%] bg-white/5 p-4 flex flex-col w-full gap-4"
         >
-          <h2 className="text-xl self-start">{title}</h2>
-          <p className="text-md self-start justify-start text-left">
+          <h2 className="text-2xl self-start">{title}</h2>
+          <p className="text-lg self-start justify-start text-left">
             {description}
           </p>
         </div>
       )}
-      {active && url !== "WIP" ? (
+      {active && url.length > 3 ? (
         <div className="flex justify-end items-end self-center scale-75">
           <Link
             className="flex absolute justify-center items-center text-white/70 hover:text-white transition rounded-full self-end bg-neutral-900 border border-yellow-300/30 h-8 w-32 mt-auto z-20"
