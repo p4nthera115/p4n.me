@@ -19,7 +19,7 @@ export default function Projects({ width }) {
     {
       id: 1,
       title: "Chroma Corps",
-      description: "",
+      description: `A website for the annual "Chroma Corps" art competition, ran by SinixDesign on Youtube`,
       url: "https://www.chroma-corps.com",
       image: "/images/cc/chromacorps.png",
       video: "/videos/chromacorps.mp4",
@@ -93,7 +93,8 @@ export default function Projects({ width }) {
     {
       id: 2,
       title: "Booknook",
-      description: "",
+      description:
+        'A passion project similar to "Goodreads" made by myself and a friend. Booknook has more of a social aspect and is more focused on reading with others.',
       url: "WIP",
       image: "/images/bn/bn-thumb.png",
       video: "",
@@ -193,7 +194,8 @@ export default function Projects({ width }) {
     {
       id: 3,
       title: "p4n.me [v1.0]",
-      description: "",
+      description:
+        "Version 1 of my website, a much more creative experience is in the works.",
       url: "",
       image: "/images/p4n/p4n-thumb.png",
       video: "",

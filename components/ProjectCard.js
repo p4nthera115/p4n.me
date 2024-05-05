@@ -78,8 +78,7 @@ export default function ProjectCard({
           layout="position"
           className={!active ? "text-xs md:text-sm flex" : "text-xl"}
         >
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
-          possimus consequuntur, distinctio, doloribus autem in veritatis ad.
+          {description}
         </p>
         {active && url.length > 3 ? (
           <div className="flex self-end mt-auto m-1">
