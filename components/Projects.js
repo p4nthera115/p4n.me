@@ -265,7 +265,7 @@ export default function Projects({ width }) {
       }}
       layout
       layoutRoot
-      className="h-[90%] md:h-full w-full relative flex flex-col gap-2 md:gap-6 justify-center items-center"
+      className="h-[90%] text-white md:h-full w-full relative flex flex-col gap-2 md:gap-6 justify-center items-center"
     >
       {projects.map((project, i) =>
         width > 768 ? (
