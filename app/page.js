@@ -23,13 +23,7 @@ export default function Home() {
     >
       <Projects width={width} />
 
-      {width > 768 ? (
-        <div className="p-4 m-8 rounded-lg bg-[#181818] absolute right-0 top-1/2 -translate-y-1/2">
-          <Socials />
-        </div>
-      ) : (
-        <MobileSocials />
-      )}
+      {width > 768 ? <Socials /> : <MobileSocials />}
     </div>
   );
 }
