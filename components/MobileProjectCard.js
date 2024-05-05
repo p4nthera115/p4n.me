@@ -77,7 +77,7 @@ export default function MobileProjectCard({
         </div>
       )}
       {active && url.length > 3 ? (
-        <div className="flex justify-end items-end self-center scale-75">
+        <div className="flex justify-end items-end self-center scale-125 p-4">
           <Link
             className="flex absolute justify-center items-center text-white/70 hover:text-white transition rounded-full self-end bg-neutral-900 border border-yellow-300/30 h-8 w-32 mt-auto z-20"
             href={url}
@@ -88,7 +88,8 @@ export default function MobileProjectCard({
           <div className="cc-button self-end"></div>
         </div>
       ) : (
-        active && (
+        active &&
+        url === "WIP" && (
           <div className="flex justify-center items-center text-white/70 hover:text-white transition rounded-md self-end border border-white/50 hover:border-white px-2 py-1 mt-auto">
             WIP
           </div>
