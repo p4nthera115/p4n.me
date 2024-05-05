@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ProjectCardHeader from "./ProjectCardHeader";
 import Timeline from "./Timeline";
@@ -58,9 +58,11 @@ export default function ProjectCard({
     >
       <motion.div layout className={!active ? inactiveThumb : activeThumb}>
         {active && showVideo && video ? (
-          <video autoPlay loop className="relative">
-            <source src={video} type="video/mp4" />
-          </video>
+          <Suspense fallback={image}>
+            <video autoPlay loop className="relative">
+              <source src={video} type="video/mp4" />
+            </video>
+          </Suspense>
         ) : (
           <img
             className="justify-center items-center self-center flex rounded-lg z-50"
