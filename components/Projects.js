@@ -19,7 +19,7 @@ export default function Projects({ width }) {
     {
       id: 1,
       title: "Chroma Corps",
-      description: `A website for the annual "Chroma Corps" art competition, ran by SinixDesign on Youtube`,
+      description: `A website for the annual "Chroma Corps" art competition, ran by SinixDesign on Youtube.`,
       url: "https://www.chroma-corps.com",
       image: "/images/cc/chromacorps.png",
       video: "/videos/chromacorps.mp4",
