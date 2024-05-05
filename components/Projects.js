@@ -192,9 +192,9 @@ export default function Projects({ width }) {
     },
     {
       id: 3,
-      title: "p4n.me",
+      title: "p4n.me [v1.0]",
       description: "",
-      url: "WIP",
+      url: "",
       image: "/images/p4n/p4n-thumb.png",
       video: "",
       stack: [

@@ -81,7 +81,7 @@ export default function ProjectCard({
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
           possimus consequuntur, distinctio, doloribus autem in veritatis ad.
         </p>
-        {active && url !== "WIP" ? (
+        {active && url.length > 3 ? (
           <div className="flex self-end mt-auto m-1">
             <Link
               className="flex absolute justify-center items-center text-white/70 hover:text-white transition rounded-full self-end bg-neutral-900 border border-yellow-300/30 h-8 w-32 z-20"
@@ -93,7 +93,8 @@ export default function ProjectCard({
             <div className="cc-button self-end"></div>
           </div>
         ) : (
-          active && (
+          active &&
+          url === "WIP" && (
             <div className="flex justify-center items-center text-white/70 hover:text-white transition rounded-md self-end border border-white/50 hover:border-white px-2 py-1 mt-auto">
               WIP
             </div>
