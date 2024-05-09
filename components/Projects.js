@@ -56,36 +56,42 @@ export default function Projects({ width }) {
           thumb: "/images/cc/cc-coming-soon.gif",
           link: "https://x.com/p4nthera_/status/1662181247504855040",
           date: "05/23",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/cc/cc-loading.gif",
           link: "https://x.com/p4nthera_/status/1667183827192520705",
           date: "06/23",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/cc/cc-cadet-select.gif",
           link: "https://x.com/p4nthera_/status/1667649236400320512",
           date: "06/23",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/cc/cc-cadet-page.gif",
           link: "https://x.com/p4nthera_/status/1671534061985120258",
           date: "06/24",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/cc/cc-assignments.gif",
           link: "https://x.com/p4nthera_/status/1674825898141401108",
           date: "06/24",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/cc/cc-finished.gif",
           link: "https://x.com/p4nthera_/status/1703131936628109815",
           date: "09/24",
+          note: "",
           divider: false,
         },
       ],
@@ -133,71 +139,139 @@ export default function Projects({ width }) {
           thumb: "/images/bn/bn-thumb.png",
           link: "https://x.com/p4nthera_/status/1729168821804847184",
           date: "11/23",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/bn/bn-sidebar.png",
           link: "https://x.com/p4nthera_/status/1730260038055235613",
           date: "11/23",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/bn/bn-notifications-wip-1.gif",
           link: "https://x.com/p4nthera_/status/1731366098606448893",
           date: "12/23",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/bn/bn-notifications-wip-2.gif",
           link: "https://x.com/p4nthera_/status/1731821865310560533",
           date: "12/23",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/bn/bn-profile-page-wip.gif",
           link: "https://x.com/p4nthera_/status/1742131263547322868",
           date: "01/24",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/bn/bn-friends-wip.gif",
           link: "https://x.com/p4nthera_/status/1742541393036255517",
           date: "01/24",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/bn/bn-search-br.gif",
           link: "https://x.com/p4nthera_/status/1746202694862139616",
           date: "01/24",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/bn/bn-settings.gif",
           link: "https://x.com/p4nthera_/status/1751267242526777519",
           date: "01/24",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/bn/bn-shelves-wip.gif",
           link: "https://x.com/p4nthera_/status/1759687771415830840",
           date: "02/24",
+          note: "",
           divider: true,
         },
         {
           thumb: "/images/bn/bn-shelves.gif",
           link: "https://x.com/p4nthera_/status/1764639269535002626",
           date: "03/24",
+          note: "",
           divider: false,
         },
       ],
     },
+    // {
+    //   id: 3,
+    //   title: "p4n.me [v2.0]",
+    //   description:
+    //     "Version 1 of my website, a much more creative experience is in the works.",
+    //   url: "",
+    //   image: "/images/p4n/v2/p4n-thumb.png",
+    //   video: "",
+    //   stack: [
+    //     {
+    //       icon: <SiNextdotjs className="hover:scale-105 transition" />,
+    //       name: "Next.js",
+    //     },
+    //     {
+    //       icon: (
+    //         <SiTailwindcss className="hover:scale-105 transition hover:text-sky-400" />
+    //       ),
+    //       name: "TailwindCSS",
+    //     },
+    //   ],
+    //   timeline: [
+    //     {
+    //       thumb: "/images/p4n/p4n-under-construction.gif",
+    //       link: "https://x.com/p4nthera_/status/1771603324095082709",
+    //       date: "03/24",
+    //       note: "",
+    //       divider: true,
+    //     },
+    //     {
+    //       thumb: "/images/p4n/p4n-wip-1.gif",
+    //       link: "https://x.com/p4nthera_/status/1774774850202063014",
+    //       date: "04/24",
+    //       note: "",
+    //       divider: true,
+    //     },
+    //     {
+    //       thumb: "/images/p4n/p4n-wip-2.gif",
+    //       link: "https://x.com/p4nthera_/status/1775107436615020881",
+    //       date: "04/24",
+    //       note: "",
+    //       divider: true,
+    //     },
+    //     {
+    //       thumb: "/images/p4n/p4n-wip-3.gif",
+    //       link: "https://x.com/p4nthera_/status/1775573759442714942",
+    //       date: "04/24",
+    //       note: "",
+    //       divider: true,
+    //     },
+    //     {
+    //       thumb: "/images/p4n/p4n-finished-card.gif",
+    //       link: "https://x.com/p4nthera_/status/1780658857158533231",
+    //       date: "04/24",
+    //       note: "",
+    //       divider: false,
+    //     },
+    //   ],
+    // },
     {
       id: 3,
       title: "p4n.me [v1.0]",
       description:
         "Version 1 of my website, a much more creative experience is in the works.",
       url: "",
-      image: "/images/p4n/p4n-thumb.png",
+      image: "/images/p4n/v1/p4n-thumb.png",
       video: "",
       stack: [
         {
@@ -213,33 +287,38 @@ export default function Projects({ width }) {
       ],
       timeline: [
         {
-          thumb: "/images/p4n/p4n-under-construction.gif",
+          thumb: "/images/p4n/v1/p4n-under-construction.gif",
           link: "https://x.com/p4nthera_/status/1771603324095082709",
           date: "03/24",
+          note: "",
           divider: true,
         },
         {
-          thumb: "/images/p4n/p4n-wip-1.gif",
+          thumb: "/images/p4n/v1/p4n-wip-1.gif",
           link: "https://x.com/p4nthera_/status/1774774850202063014",
           date: "04/24",
+          note: "",
           divider: true,
         },
         {
-          thumb: "/images/p4n/p4n-wip-2.gif",
+          thumb: "/images/p4n/v1/p4n-wip-2.gif",
           link: "https://x.com/p4nthera_/status/1775107436615020881",
           date: "04/24",
+          note: "",
           divider: true,
         },
         {
-          thumb: "/images/p4n/p4n-wip-3.gif",
+          thumb: "/images/p4n/v1/p4n-wip-3.gif",
           link: "https://x.com/p4nthera_/status/1775573759442714942",
           date: "04/24",
+          note: "",
           divider: true,
         },
         {
-          thumb: "/images/p4n/p4n-finished-card.gif",
+          thumb: "/images/p4n/v1/p4n-finished-card.gif",
           link: "https://x.com/p4nthera_/status/1780658857158533231",
           date: "04/24",
+          note: "",
           divider: false,
         },
       ],
@@ -261,7 +340,7 @@ export default function Projects({ width }) {
       }}
       layout
       layoutRoot
-      className="h-[90%] text-white md:h-full w-full relative flex flex-col gap-2 md:gap-6 justify-center items-center"
+      className="h-[90%] text-white md:h-full w-full relative flex flex-col gap-2 md:gap-6 justify-center items-center overflow-y-auto"
     >
       {projects.map((project, i) =>
         width > 768 ? (

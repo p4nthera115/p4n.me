@@ -36,7 +36,7 @@ export default function ProjectCard({
     }
   }, [active]);
 
-  const inactiveCard = `flex relative w-5/6 md:3/4 lg:w-1/2 justify-evenly h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-6 ${z} `;
+  const inactiveCard = `flex relative w-5/6 md:w-3/4 lg:w-1/2 justify-evenly h-44 rounded-2xl hover:cursor-pointer bg-[#181818] cursor-pointer flex-row gap-10 p-6 ${z} `;
   const activeCard =
     "flex absolute w-full h-full md:justify-center rounded-2xl bg-[#181818] p-6 flex-col md:flex-row gap-12 z-[100] hover:cursor-default overflow-hidden";
 
