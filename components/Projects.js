@@ -11,6 +11,7 @@ import {
   SiSupabase,
   SiCloudflare,
   SiPrisma,
+  SiFigma,
 } from "react-icons/si";
 import MobileProjectCard from "./MobileProjectCard";
 
@@ -132,6 +133,10 @@ export default function Projects({ width }) {
             <SiPrisma className="hover:scale-105 transition hover:text-sky-900" />
           ),
           name: "Prisma",
+        },
+        {
+          icon: <SiFigma className="hover:scale-105 transition" />,
+          name: "Figma",
         },
       ],
       timeline: [
@@ -283,6 +288,10 @@ export default function Projects({ width }) {
             <SiTailwindcss className="hover:scale-105 transition hover:text-sky-400" />
           ),
           name: "TailwindCSS",
+        },
+        {
+          icon: <SiFigma className="hover:scale-105 transition" />,
+          name: "Figma",
         },
       ],
       timeline: [
